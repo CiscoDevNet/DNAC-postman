@@ -1,6 +1,6 @@
 # Introduction
 
-This is a collection and environment for Cisco Digital Network Architecture Controller (DNAC)
+This is a collection and environment for Cisco Digital Network Architecture Center (DNA-C)
 
 There is a default environment pointing to an always on sandbox.
 
