@@ -18,7 +18,7 @@ You can also download them and import from file/folder.
 * https://raw.githubusercontent.com/CiscoDevNet/dnac-samples-aradford/master/tools/postman/DNAC-SandboxProxy.postman_environment.json
 * https://raw.githubusercontent.com/CiscoDevNet/dnac-samples-aradford/master/tools/postman/01-DNAC-Sandbox.postman_collection.json
 
-![alt tag](images/importing.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/importing.png)
 
 # Getting Started
 After the import has completed, you will need to select the environment.  You will notice there are two options.
@@ -28,7 +28,7 @@ so has no way to execute PUT/POST/DELETE
 
 Once you have done this, you need to first run the request to get a Ticket.  This request is in the **1.Ticket folder**.
 The authentication token will then be used in subsequent requests.  It is stored in an environment variable.
-![alt tag](images/firstRequest.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/firstRequest.png)
 
 **NOTE: If this request fails you may need to accept the certificate from the controller in your browser**
 http://blog.getpostman.com/2014/01/28/using-self-signed-certificates-with-postman/
@@ -36,7 +36,7 @@ http://blog.getpostman.com/2014/01/28/using-self-signed-certificates-with-postma
 
 Inside each folder, the requests are sequential.  GET/POST/DELETE etc.  So you can run through them one by one.
 You can also check on the UI for the controller to see the effect of the requests.
-![alt tag](images/network-device-get.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/network-device-get.png)
 
 
 # More Advanced API Calls
@@ -44,7 +44,7 @@ You can also check on the UI for the controller to see the effect of the request
 Most of the calls on the controller are asynchronous (PUT/POST/DELETE).  When you execute these calls, they will always
 succeed and return a taskId.  Take a look at 3.Tags and Locations.  Select and run the second request which is a POST, 
 to create a new Tag called "InterestingDevice".  
-![alt tag](images/tag-POST.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/tag-POST.png)
 
 The response from the previous request is a task.  This is an asynchronous request.  You need to poll the task status
 to find out if the creation was really successful.
@@ -54,7 +54,7 @@ The next request in the list shows how to do this.
 Notice there is a {{taskId}} in the URL being called.  Anything inside the {{}}
 is a variable.  In this case taskId.  This was set behind the scenes in the previous API call.  
 
-![alt tag](images/task-response.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/task-response.png)
 
 The body of the response contains a "progress" key.  This indicates the Universally Unique ID (UUID) of the new Tag.  
 This UUID can be used to lookup the tag directly, assign the tag to a network device (the next API call) or delete the
@@ -84,7 +84,7 @@ Go back to the "https://{{apic}}:{{port}}/api/v1/tag POST"  request and Send.
 
 
 Then take a look at the task status "https://{{apic}}:{{port}}/api/v1/task - TAG"
-![alt tag](images/task-fail.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/task-fail.png)
 
 ```
 {
@@ -106,13 +106,13 @@ Then take a look at the task status "https://{{apic}}:{{port}}/api/v1/task - TAG
 
 This is because the tag already exists.  You can fix this.  You need to use the "https://{{apic}}:{{port}}/api/v1/tag FIND TAG
 " request.  This has a side effect of setting the tagId to the UUID of the "InterestingDevice" tag.
-![alt tag](images/find-tag.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/find-tag.png)
 
 You can then scroll down to the "https://{{apic}}:{{port}}/api/v1/tag -DELETE" request, and press Send
-![alt tag](images/delete-tag.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/delete-tag.png)
 
 Again, you will get a taskId.  You can use any of the task GET requests.
-![alt tag](images/delete-status.png)
+![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/delete-status.png)
 
 Please make sure you clean up by either deleting through the UI or the POSTMAN window.
 
