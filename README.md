@@ -14,9 +14,9 @@ It has free Jetpacks support.  This is required for linking requests.
 You need to import the collection as well as the environment.  You can import the raw git files using the **From URL** option, as seen below.
 You can also download them and import from file/folder.
 
-* https://raw.githubusercontent.com/CiscoDevNet/dnac-samples-aradford/master/tools/postman/DNAC-Sandbox.postman_environment.json
-* https://raw.githubusercontent.com/CiscoDevNet/dnac-samples-aradford/master/tools/postman/DNAC-SandboxProxy.postman_environment.json
-* https://raw.githubusercontent.com/CiscoDevNet/dnac-samples-aradford/master/tools/postman/01-DNAC-Sandbox.postman_collection.json
+* https://raw.githubusercontent.com/CiscoDevNet/DNAC-postman/master/DNAC-Sandbox.postman_environment.json
+* https://raw.githubusercontent.com/CiscoDevNet/DNAC-postman/master/DNAC-SandboxProxy.postman_environment.json
+* https://raw.githubusercontent.com/CiscoDevNet/DNAC-postman/master/01-DNAC-Sandbox.postman_collection.json
 
 ![alt tag](https://github.com/CiscoDevNet/DNAC-postman/blob/master/images/importing.png)
 
